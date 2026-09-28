@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "AR Scan",
+    "slug": "ar-scan-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "com.arscan.app",
+      "permissions": [
+        "android.permission.CAMERA"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro",
+      "name": "AR Scan",
+      "shortName": "AR Scan",
+      "themeColor": "#07080b",
+      "backgroundColor": "#07080b",
+      "description": "Marker-based web AR: point an Android phone camera at the Hiro marker and a red 3D cube locks onto it."
+    },
+    "description": "Marker-based web AR: point an Android phone camera at the Hiro marker and a red 3D cube locks onto it."
+  }
+}

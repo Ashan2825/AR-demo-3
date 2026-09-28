@@ -1,0 +1,39 @@
+{
+  "name": "ar-scan-app",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "dependencies": {
+    "@ar-js-org/ar.js": "^3.4.8",
+    "@expo/metro-runtime": "~57.0.15",
+    "expo": "~57.0.20",
+    "expo-status-bar": "~57.0.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-native": "0.86.3",
+    "react-native-web": "^0.21.2",
+    "react-native-webview": "13.16.1",
+    "three": "^0.185.1"
+  },
+  "devDependencies": {
+    "@types/react": "~19.2.2",
+    "@types/three": "^0.185.4",
+    "typescript": "~6.0.3"
+  },
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web",
+    "export:web": "expo export -p web",
+    "tunnel": "expo start --web --tunnel",
+    "prebuild:android": "expo prebuild -p android",
+    "bundle:web": "node scripts/bundle-web.mjs",
+    "apk": "expo prebuild -p android && node scripts/bundle-web.mjs && cd android && ./gradlew assembleRelease -PreactNativeArchitectures=arm64-v8a -Dorg.gradle.internal.http.connectionTimeout=600000 -Dorg.gradle.internal.http.socketTimeout=600000"
+  },
+  "private": true,
+  "overrides": {
+    "@ar-js-org/ar.js": {
+      "three": "$three"
+    }
+  }
+}
